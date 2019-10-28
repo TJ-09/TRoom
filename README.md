@@ -1,4 +1,4 @@
-# TRoom
+# Dorchester-On-Thames Tea Room app to help with calculating order costs, very simple web app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
 
