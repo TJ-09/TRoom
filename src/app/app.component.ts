@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MatListModule } from '@angular/material/list';
 import { Products } from './products';
 
 @Component({
@@ -21,9 +20,9 @@ export class AppComponent {
     this.currentBill = this.currentBill + product.cost;
   }
 
-  getItems() {
-    return this.items;
-  }
+  // getItems() {
+  //   return this.items;
+  // }
 
   calculateBill() {
     this.items.forEach(element => {
@@ -46,23 +45,7 @@ export class AppComponent {
 
   testMe() {
     console.log('testing');
-
   }
 }
-
-// export interface Products {
-//   itemName: string;
-//   cost: number;
-//   icon: string;
-// }
-
-// const products = [
-//   { itemName: 'Cake', cost: 1, icon: 'cake' },
-//   { itemName: 'Cake Special', cost: 1, icon: 'cake' },
-//   { itemName: 'Tea', cost: 1, icon: 'emoji_food_beverage' },
-//   { itemName: 'Coffee', cost: 1, icon: 'local_cafe' },
-//   { itemName: 'Juice', cost: 2.5, icon: 'local_drink' },
-
-// ]
 
 
