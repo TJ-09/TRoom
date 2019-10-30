@@ -17,3 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Live demo
 
 https://tj-09.github.io/TRoom/
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0ad7d5d338f34d208b1b25ee7f2d499839c2b18c
