@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { Products } from './products';
+import { Component, TemplateRef } from '@angular/core';
+import { IndoorProducts, HatchProducts, HatchTea, IndoorTea, TeaType, IndoorTeaType } from './products';
+import { MatDialog, MatDialogConfig } from "@angular/material";
+
 
 @Component({
   selector: 'app-root',
@@ -7,33 +9,61 @@ import { Products } from './products';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'TRoom';
 
+  constructor(private dialog: MatDialog) { }
+
+  title = 'TRoom';
   displayedColumns = ['position', 'name', 'weight', 'symbol', 'action'];
   items = [];
   itemsCost = [];
-  products = Products;
+  products = IndoorProducts;
+  indoorteas = IndoorTea;
+  teas = IndoorTea
+  teaTypes = TeaType;
   currentBill = 0;
+  menu = 'Inside Menu';
+  toggle = true;
 
   addToCart(product) {
     this.items.push([product.itemName, product.cost]);
     this.currentBill = this.currentBill + product.cost;
+    this.dialog.closeAll();
   }
 
-  // getItems() {
-  //   return this.items;
-  // }
+  toggleItems() {
+    this.toggle = !this.toggle;
+    console.log(this.toggle);
+    if (this.toggle) {
+      this.menu = 'Indoor Menu'
+      this.products = IndoorProducts;
+      this.teas = IndoorTea
+      //  this.teaTypes = IndoorTeaType;
+    }
+    else {
+      this.menu = 'Hatch Menu'
+      this.products = HatchProducts;
+      this.teas = HatchTea
+      //  this.teaTypes = TeaType;
+    }
+  }
 
-  calculateBill() {
-    this.items.forEach(element => {
-      this.currentBill = this.currentBill + element[1];
-    });
+  addTea(templateRef: TemplateRef<any>) {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    //dialogConfig.width = '500px';
+    this.dialog.open(templateRef, dialogConfig);
   }
 
   deleteItem(product) {
-    console.log(product);
+
     this.currentBill = this.currentBill - product[1];
-    this.items.splice(product, 1);
+    var index = this.items.indexOf(product);
+    if (index > -1) {
+      this.items.splice(index, 1);
+    }
+
 
   }
 
