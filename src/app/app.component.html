@@ -1,5 +1,6 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
+
   &nbsp;
   &nbsp;
   <i class="material-icons" width="40" height="40" alt="Logo">storefront</i>
@@ -13,34 +14,34 @@
   &nbsp;
 </div>
 
-<mat-grid-list cols="3">
-  <mat-grid-tile colspan="2">
-    <div class="content" role="main">
-      <!-- Product List -->
-      <h2>Product List</h2>
-      <h2>
-        <mat-slide-toggle (click)="toggleItems()">{{ menu }}</mat-slide-toggle>
-      </h2>
-      <p>Press on the items ordered</p>
+<div fxLayout="row" class="wrapper">
 
-      <div class="card-container">
+  <div fxFlex.gt-sm="67" fxFlex="33" class="content" role="main">
+    <!-- Product List -->
+    <h2>Product List</h2>
+    <h2>
+      <mat-slide-toggle (click)="toggleItems()">{{ menu }}</mat-slide-toggle>
+    </h2>
+    <p class="para">Press on the items ordered</p>
 
-        <a class="card" *ngFor="let product of products" (click)="addToCart(product)">
-          <i class="material-icons" width="24" height="24">{{ product.icon}}</i>
-          <span> {{ product.itemName }}</span>
-        </a>
+    <div class="card-container">
 
-        <a class="card" *ngFor="let tea of teas" (click)="addTea(myTemp)">
-          <i class="material-icons" width="24" height="24">{{ tea.icon}}</i>
-          <span> {{ tea.itemName }}</span>
-        </a>
+      <a class="card" *ngFor="let product of products" (click)="addToCart(product)">
+        <i class="material-icons" width="24" height="24">{{ product.icon}}</i>
+        <span> {{ product.itemName }}</span>
+      </a>
 
-      </div>
+      <a class="card" *ngFor="let tea of teas" (click)="addTea(myTemp)">
+        <i class="material-icons" width="24" height="24">{{ tea.icon}}</i>
+        <span> {{ tea.itemName }}</span>
+      </a>
+
     </div>
+  </div>
 
-  </mat-grid-tile>
 
-  <mat-grid-tile>
+
+  <div fxFlex.gt-sm="33" fxFlex="67" class="content">
     <div>
       <h2>Current Order</h2>
       <h2>
@@ -61,12 +62,16 @@
       </mat-nav-list>
 
     </div>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+
+</div>
+
 <!-- Footer -->
-<footer>
-  &nbsp;
-</footer>
+<div>&nbsp;
+</div>
+
+
+
 
 <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677"
   viewBox="0 0 2611.084 485.677">

@@ -32,6 +32,7 @@ export class AppComponent {
 
   toggleItems() {
     this.toggle = !this.toggle;
+    this.clearCart();
     console.log(this.toggle);
     if (this.toggle) {
       this.menu = 'Indoor Menu'

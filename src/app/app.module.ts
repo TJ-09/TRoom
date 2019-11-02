@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDialogModule } from "@angular/material";
 import { MatGridListModule } from '@angular/material/grid-list';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatButtonModule,
     MatSlideToggleModule,
     MatDialogModule,
-    MatGridListModule
+    MatGridListModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
