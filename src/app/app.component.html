@@ -16,7 +16,7 @@
 
 <div fxLayout="row" class="wrapper">
 
-  <div fxFlex.gt-sm="67" fxFlex="33" class="content" role="main">
+  <div fxFlex="40" fxFlex.gt-xs="67" class="content" role="main">
     <!-- Product List -->
     <h2>Product List</h2>
     <h2>
@@ -31,6 +31,7 @@
         <span> {{ product.itemName }}</span>
       </a>
 
+
       <a class="card" *ngFor="let tea of teas" (click)="addTea(myTemp)">
         <i class="material-icons" width="24" height="24">{{ tea.icon}}</i>
         <span> {{ tea.itemName }}</span>
@@ -41,14 +42,14 @@
 
 
 
-  <div fxFlex.gt-sm="33" fxFlex="67" class="content">
-    <div>
-      <h2>Current Order</h2>
-      <h2>
-        <p>{{ currentBill | currency: 'GBP' }}</p>
-      </h2>
+  <div fxFlex="60" fxFlex.gt-xs="33" class="content">
 
-    </div>
+    <h2>Current Order</h2>
+    <h2>
+      <p>{{ currentBill | currency: 'GBP' }}</p>
+    </h2>
+
+
 
     <div>
 
@@ -82,11 +83,11 @@
 
 
 
-<ng-template #myTemp>
+<ng-template #myTemp class="content-sm">
   <h2 mat-dialog-title>Tea Type</h2>
   <mat-dialog-content>
-    <a class="card" *ngFor="let tea of teaTypes" (click)="addToCart(tea)">
-      <i class="material-icons" width="24" height="24">{{ tea.icon}}</i>
+    <a class="card-sm card" *ngFor="let tea of teaTypes" (click)="addToCart(tea)">
+      <i class="material-icons">{{ tea.icon}}</i>
       <span> {{ tea.itemName }}</span>
     </a>
   </mat-dialog-content>

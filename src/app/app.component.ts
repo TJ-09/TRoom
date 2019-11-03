@@ -1,5 +1,5 @@
 import { Component, TemplateRef } from '@angular/core';
-import { IndoorProducts, HatchProducts, HatchTea, IndoorTea, TeaType, IndoorTeaType } from './products';
+import { IndoorProducts, HatchProducts, HatchTea, IndoorTea, HatchTeaType, IndoorTeaType } from './products';
 import { MatDialog, MatDialogConfig } from "@angular/material";
 
 
@@ -12,49 +12,57 @@ export class AppComponent {
 
   constructor(private dialog: MatDialog) { }
 
-  title = 'TRoom';
-  displayedColumns = ['position', 'name', 'weight', 'symbol', 'action'];
   items = [];
   itemsCost = [];
+
+
+  //star off inside so set the products accordingly
   products = IndoorProducts;
   indoorteas = IndoorTea;
   teas = IndoorTea
-  teaTypes = TeaType;
-  currentBill = 0;
+  teaTypes = IndoorTeaType;
   menu = 'Inside Menu';
   toggle = true;
 
+  // set the bill to zero
+  currentBill = 0;
+
+
   addToCart(product) {
     this.items.push([product.itemName, product.cost]);
+    console.log(this.items);
     this.currentBill = this.currentBill + product.cost;
     this.dialog.closeAll();
   }
 
   toggleItems() {
-    this.toggle = !this.toggle;
+    this.toggle = !this.toggle; //swtich between the two
     this.clearCart();
     console.log(this.toggle);
     if (this.toggle) {
+      // if the toggle is true then we are inside so display the indoor menu and teas
       this.menu = 'Indoor Menu'
       this.products = IndoorProducts;
       this.teas = IndoorTea
-      //  this.teaTypes = IndoorTeaType;
+      this.teaTypes = IndoorTeaType;
     }
     else {
+      // otherwise we must be at the hatch so show the hatch menu
       this.menu = 'Hatch Menu'
       this.products = HatchProducts;
       this.teas = HatchTea
-      //  this.teaTypes = TeaType;
+      this.teaTypes = HatchTeaType;
     }
   }
 
   addTea(templateRef: TemplateRef<any>) {
     const dialogConfig = new MatDialogConfig();
-
+    // if(this.toggle)
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
-    //dialogConfig.width = '500px';
+    //  dialogConfig.width = '500px';
     this.dialog.open(templateRef, dialogConfig);
+
   }
 
   deleteItem(product) {

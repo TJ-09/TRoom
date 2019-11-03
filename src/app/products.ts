@@ -32,11 +32,11 @@ export const HatchTea = [
 ]
 
 export const IndoorTea = [
-    { itemName: 'Pot of Tea for 1', cost: 1.2, icon: 'emoji_food_beverage' },
-    { itemName: 'Pot of Tea for 2', cost: 2.4, icon: 'free_breakfast' },
+    { itemName: 'Pot of Tea', cost: 0, icon: 'free_breakfast' },
+    // { itemName: 'Pot of Tea for 2', cost: 2.4, icon: 'free_breakfast' },
 ]
 
-export const TeaType = [
+export const HatchTeaType = [
     { itemName: 'English Breakfast', cost: 1.2, icon: 'emoji_food_beverage' },
     { itemName: 'Earl Grey', cost: 1.2, icon: 'emoji_food_beverage' },
     { itemName: 'Decaf', cost: 1.2, icon: 'emoji_food_beverage' },
@@ -52,4 +52,5 @@ export const IndoorTeaType = [
     { itemName: 'Pot 2 Earl Grey', cost: 2.4, icon: 'emoji_food_beverage' },
     { itemName: 'Pot 2 Decaf', cost: 2.4, icon: 'emoji_food_beverage' },
     { itemName: 'Pot 2 Fruit Tea', cost: 2.4, icon: 'emoji_food_beverage' },
+
 ]
