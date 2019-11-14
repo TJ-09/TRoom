@@ -1,7 +1,8 @@
 import { Component, TemplateRef } from '@angular/core';
 import { IndoorProducts, HatchProducts, HatchTea, IndoorTea, HatchTeaType, IndoorTeaType } from './products';
 import { MatDialog, MatDialogConfig } from "@angular/material";
-
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
+import { MoneyBarComponent } from './money-bar/money-bar.component'
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { MatDialog, MatDialogConfig } from "@angular/material";
 })
 export class AppComponent {
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog, private _bottomSheet: MatBottomSheet) { }
+
 
   items = [];
   itemsCost = [];
@@ -30,7 +32,7 @@ export class AppComponent {
 
   addToCart(product) {
     this.items.push([product.itemName, product.cost]);
-    console.log(this.items);
+    //console.log(this.items);
     this.currentBill = this.currentBill + product.cost;
     this.dialog.closeAll();
   }
@@ -38,7 +40,7 @@ export class AppComponent {
   toggleItems() {
     this.toggle = !this.toggle; //swtich between the two
     this.clearCart();
-    console.log(this.toggle);
+    //console.log(this.toggle);
     if (this.toggle) {
       // if the toggle is true then we are inside so display the indoor menu and teas
       this.menu = 'Indoor Menu'
@@ -85,6 +87,11 @@ export class AppComponent {
   testMe() {
     console.log('testing');
   }
+
+  openMoney(): void {
+    this._bottomSheet.open(MoneyBarComponent, {
+      data: { bill: this.currentBill },
+    });
+  }
+
 }
-
-

@@ -10,11 +10,16 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDialogModule } from "@angular/material";
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MoneyBarComponent, ErrorBarComponent } from './money-bar/money-bar.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    MoneyBarComponent,
+    ErrorBarComponent
   ],
   imports: [
     BrowserModule,
@@ -26,8 +31,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSlideToggleModule,
     MatDialogModule,
     MatGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatBottomSheetModule,
+    MatSnackBarModule,
   ],
+  entryComponents: [MoneyBarComponent, ErrorBarComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
