@@ -52,10 +52,10 @@
 
 
     <div>
-
+      <!-- this is the current order list -->
       <mat-nav-list>
         <mat-list-item *ngFor="let item of items">
-          <span matLine>{{ item[0] }} {{ item[1] | currency: 'GBP' }}</span>
+          <span matLine>{{ item[0] }} x {{item[2]}} : {{ item[1] * item[2] | currency: 'GBP' }}</span>
           <button mat-icon-button (click)="deleteItem(item)">
             <i class="material-icons" width="24" height="24">delete_forever</i>
           </button>
@@ -67,7 +67,7 @@
 
 </div>
 
-<!-- Footer -->
+<!-- Footer - opens the numpad for the change calc -->
 <footer>
   <div class="content">
 
@@ -88,7 +88,7 @@
 </svg>
 
 
-
+<!-- dialog html for the tea types -->
 <ng-template #myTemp class="content-sm">
   <h2 mat-dialog-title>Tea Type</h2>
   <mat-dialog-content>

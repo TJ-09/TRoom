@@ -30,10 +30,30 @@ export class AppComponent {
   currentBill = 0;
 
 
+  getIndex(product) {
+    var returnIndex;
+    for (let index = 0; index < this.items.length; index++) {
+      const element = this.items[index];
+      if (product.itemName === element[0]) {
+        returnIndex = index;
+        return returnIndex;
+      }
+    }
+  }
+
   addToCart(product) {
-    this.items.push([product.itemName, product.cost]);
-    //console.log(this.items);
-    this.currentBill = this.currentBill + product.cost;
+
+    var indexOf = this.getIndex(product);
+
+    if (indexOf >= 0) {
+      // if the item is in the array already then add one to the amount
+      this.items[indexOf][2] += 1;
+      this.currentBill = this.currentBill + product.cost;
+    } else {
+      // if it does not yet exist then add it
+      this.items.push([product.itemName, product.cost, product.amount]);
+      this.currentBill = this.currentBill + product.cost;
+    }
     this.dialog.closeAll();
   }
 
@@ -68,14 +88,18 @@ export class AppComponent {
   }
 
   deleteItem(product) {
-
-    this.currentBill = this.currentBill - product[1];
-    var index = this.items.indexOf(product);
-    if (index > -1) {
-      this.items.splice(index, 1);
+    var indexOf = this.getIndex({ itemName: product[0] });
+    if (indexOf >= 0) {
+      if (this.items[indexOf][2] === 1) {
+        // if there is only one left in the array then splice from array
+        this.currentBill = this.currentBill - product[1];
+        this.items.splice(indexOf, 1);
+      } else {
+        // if there is more than one item in the array then remove one to the amount
+        this.currentBill = this.currentBill - product[1];
+        this.items[indexOf][2] -= 1;
+      }
     }
-
-
   }
 
   clearCart() {

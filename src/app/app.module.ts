@@ -13,6 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MoneyBarComponent, ErrorBarComponent } from './money-bar/money-bar.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FlexLayoutModule,
     MatBottomSheetModule,
     MatSnackBarModule,
+    MatBadgeModule
   ],
   entryComponents: [MoneyBarComponent, ErrorBarComponent],
   providers: [],
