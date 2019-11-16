@@ -17,7 +17,6 @@ export class AppComponent {
   items = [];
   itemsCost = [];
 
-
   //star off inside so set the products accordingly
   products = IndoorProducts;
   indoorteas = IndoorTea;

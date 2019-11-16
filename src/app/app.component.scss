@@ -41,7 +41,8 @@
   .content {
     display: flex;
     margin: 0px auto;
-  padding-top: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
     max-width: 960px;
     flex-direction: column;
     align-items: center;
@@ -254,5 +255,9 @@
 body {
   padding: 2em; 
 }
+
+ * {
+      touch-action: manipulation;
+  }
 
   }

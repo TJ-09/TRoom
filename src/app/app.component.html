@@ -26,17 +26,15 @@
 
     <div class="card-container">
 
-      <a class="card" *ngFor="let product of products" (click)="addToCart(product)">
-        <i class="material-icons" width="24" height="24">{{ product.icon}}</i>
-        <span> {{ product.itemName }}</span>
-      </a>
-
-
       <a class="card" *ngFor="let tea of teas" (click)="addTea(myTemp)">
         <i class="material-icons" width="24" height="24">{{ tea.icon}}</i>
         <span> {{ tea.itemName }}</span>
       </a>
 
+      <a class="card" *ngFor="let product of products" (click)="addToCart(product)">
+        <i class="material-icons" width="24" height="24">{{ product.icon}}</i>
+        <span> {{ product.itemName }}</span>
+      </a>
     </div>
   </div>
 
@@ -72,7 +70,8 @@
   <div class="content">
 
     <button mat-fab (click)="openMoney()">
-      <i class="material-icons" width="24" height="24">monetization_on</i>
+      <!-- <i class="material-icons" width="24" height="24">monetization_on</i> -->
+      <i class="fas fa-pound-sign"></i>
     </button>
   </div>
 </footer>

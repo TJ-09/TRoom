@@ -8,22 +8,22 @@
 export const HatchProducts = [
     { itemName: 'Cake', cost: 1.8, icon: 'cake', amount: 1 },
     { itemName: 'Cake Special', cost: 2.5, icon: 'cake', amount: 1 },
+    { itemName: 'Cream Tea', cost: 2.5, icon: 'scatter_plot', amount: 1 },
+    { itemName: 'Scone', cost: 1.3, icon: 'fiber_manual_record', amount: 1 },
     { itemName: 'Filter Coffee', cost: 1.2, icon: 'local_cafe', amount: 1 },
     { itemName: 'Decaf Coffee', cost: 0.7, icon: 'local_cafe', amount: 1 },
     { itemName: 'Juice', cost: 0.3, icon: 'local_drink', amount: 1 },
-    { itemName: 'Scone', cost: 1.3, icon: 'fiber_manual_record', amount: 1 },
-    { itemName: 'Cream Tea', cost: 2.5, icon: 'scatter_plot', amount: 1 },
 
 ]
 
 export const IndoorProducts = [
     { itemName: 'Cake', cost: 1.8, icon: 'cake', amount: 1 },
     { itemName: 'Cake Special', cost: 2.5, icon: 'cake', amount: 1 },
+    { itemName: 'Cream Tea', cost: 2.5, icon: 'scatter_plot', amount: 1 },
+    { itemName: 'Scone', cost: 1.3, icon: 'fiber_manual_record', amount: 1 },
     { itemName: 'Filter Coffee', cost: 1.2, icon: 'local_cafe', amount: 1 },
     { itemName: 'Decaf Coffee', cost: 0.7, icon: 'local_cafe', amount: 1 },
     { itemName: 'Juice', cost: 0.3, icon: 'local_drink', amount: 1 },
-    { itemName: 'Scone', cost: 1.3, icon: 'fiber_manual_record', amount: 1 },
-    { itemName: 'Cream Tea', cost: 2.5, icon: 'scatter_plot', amount: 1 },
 
 ]
 
