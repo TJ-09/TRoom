@@ -1,4 +1,4 @@
-# Dorchester-On-Thames Tea Room app to help with calculating order costs, very simple web app
+# Dorchester-On-Thames Tea Room app to help with calculating orders, costs and change. A very simple web app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
 
@@ -13,6 +13,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+To build for the demo page the command below, which can then be pushed.
+
+`ng build --prod --output-path docs --base-href /TRoom/`
 
 ## Live demo
 
