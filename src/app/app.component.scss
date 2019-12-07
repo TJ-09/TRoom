@@ -28,7 +28,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #673ab7;
     color: white;
     font-weight: 600;
   }
@@ -106,7 +106,7 @@
   }
 
   .card.highlight-card {
-    background-color: #1976d2;
+    background-color: #673ab7;
     color: white;
     font-weight: 600;
     border: none;
@@ -137,12 +137,12 @@
   a,
   a:visited,
   a:hover {
-    color: #1976d2;
+    color: #673ab7;
     text-decoration: none;
   }
 
   a:hover {
-    color: #125699;
+    color: #512c90;
   }
 
   .circle-link {
@@ -167,8 +167,8 @@
 
   footer {
     position:fixed;
-       bottom:0px;
- width:100%;
+    bottom:0px;
+    width:100%;
     margin-top: 8px;
     display: flex;
     align-items: center;
@@ -253,6 +253,7 @@
 
 body {
   padding: 2em; 
+
 }
 
  * {
