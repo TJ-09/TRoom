@@ -13,6 +13,7 @@ export const HatchProducts = [
     { itemName: 'Filter Coffee', cost: 1.2, icon: 'local_cafe', amount: 1 },
     { itemName: 'Decaf Coffee', cost: 0.7, icon: 'local_cafe', amount: 1 },
     { itemName: 'Juice', cost: 0.3, icon: 'local_drink', amount: 1 },
+    { itemName: 'Cookbook', cost: 7.5, icon: 'menu_book', amount: 1 },
 
 ]
 
@@ -24,6 +25,7 @@ export const IndoorProducts = [
     { itemName: 'Filter Coffee', cost: 1.2, icon: 'local_cafe', amount: 1 },
     { itemName: 'Decaf Coffee', cost: 0.7, icon: 'local_cafe', amount: 1 },
     { itemName: 'Juice', cost: 0.3, icon: 'local_drink', amount: 1 },
+    { itemName: 'Cookbook', cost: 7.5, icon: 'menu_book', amount: 1 },
 
 ]
 
