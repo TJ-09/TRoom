@@ -1,6 +1,6 @@
 import { Component, TemplateRef } from '@angular/core';
 import { IndoorProducts, HatchProducts, HatchTea, IndoorTea, HatchTeaType, IndoorTeaType } from './products';
-import { MatDialog, MatDialogConfig } from "@angular/material";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { MoneyBarComponent } from './money-bar/money-bar.component'
 
