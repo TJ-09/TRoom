@@ -11,16 +11,15 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { MoneyBarComponent, ErrorBarComponent } from './money-bar/money-bar.component';
+import { MoneyBarComponent } from './money-bar/money-bar.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatBadgeModule } from '@angular/material/badge';
-
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoneyBarComponent,
-    ErrorBarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +34,10 @@ import { MatBadgeModule } from '@angular/material/badge';
     FlexLayoutModule,
     MatBottomSheetModule,
     MatSnackBarModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatRippleModule
   ],
-  entryComponents: [MoneyBarComponent, ErrorBarComponent],
+  entryComponents: [MoneyBarComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

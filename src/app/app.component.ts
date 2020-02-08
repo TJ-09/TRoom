@@ -1,8 +1,9 @@
 import { Component, TemplateRef } from '@angular/core';
 import { IndoorProducts, HatchProducts, HatchTea, IndoorTea, HatchTeaType, IndoorTeaType } from './products';
-import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { MoneyBarComponent } from './money-bar/money-bar.component'
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { MoneyBarComponent } from './money-bar/money-bar.component'
 })
 export class AppComponent {
 
-  constructor(private dialog: MatDialog, private _bottomSheet: MatBottomSheet) { }
+  constructor(private dialog: MatDialog, private _bottomSheet: MatBottomSheet, private snackBar: MatSnackBar) { }
 
 
   items = [];
@@ -53,7 +54,7 @@ export class AppComponent {
       this.items.push([product.itemName, product.cost, product.amount]);
       this.currentBill = this.currentBill + product.cost;
     }
-    this.dialog.closeAll();
+    // this.dialog.closeAll();
   }
 
   toggleItems() {
@@ -104,6 +105,7 @@ export class AppComponent {
   clearCart() {
     this.items = [];
     this.currentBill = 0;
+    this.snackBar.open('Order cleared', '', { duration: 2000 });
     return this.items;
   }
 

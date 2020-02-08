@@ -26,12 +26,12 @@
 
     <div class="card-container">
 
-      <a class="card" *ngFor="let tea of teas" (click)="addTea(myTemp)">
+      <a matRipple class="card noselect" *ngFor="let tea of teas" (click)="addTea(teaPopup)">
         <i class="material-icons" width="24" height="24">{{ tea.icon}}</i>
         <span> {{ tea.itemName }}</span>
       </a>
 
-      <a class="card" *ngFor="let product of products" (click)="addToCart(product)">
+      <a matRipple class="card noselect" *ngFor="let product of products" (click)="addToCart(product)">
         <i class="material-icons" width="24" height="24">{{ product.icon}}</i>
         <span> {{ product.itemName }}</span>
       </a>
@@ -40,7 +40,7 @@
 
 
 
-  <div fxFlex="60" fxFlex.gt-xs="33" class="content">
+  <div fxFlex="60" fxFlex.gt-xs="33" class="content noselect">
 
     <h2>Current Order</h2>
     <h2>
@@ -52,11 +52,9 @@
     <div>
       <!-- this is the current order list -->
       <mat-nav-list>
-        <mat-list-item *ngFor="let item of items">
+        <mat-list-item *ngFor="let item of items" (click)="deleteItem(item)" class="noselect">
           <span matLine>{{ item[0] }} x {{item[2]}} : {{ item[1] * item[2] | currency: 'GBP' }}</span>
-          <button mat-icon-button (click)="deleteItem(item)">
-            <i class="material-icons" width="24" height="24">delete_forever</i>
-          </button>
+          <i class="material-icons" width="24" height="24">delete_forever</i>
         </mat-list-item>
       </mat-nav-list>
 
@@ -69,7 +67,7 @@
 <footer>
   <div class="content">
 
-    <button mat-fab (click)="openMoney()">
+    <button matRipple mat-fab (click)="openMoney()">
       <!-- <i class="material-icons" width="24" height="24">monetization_on</i> -->
       <i class="fas fa-pound-sign"></i>
     </button>
@@ -88,14 +86,17 @@
 
 
 <!-- dialog html for the tea types -->
-<ng-template #myTemp class="content-sm">
+<ng-template #teaPopup class="content-sm">
   <h2 mat-dialog-title>Tea Type</h2>
   <mat-dialog-content>
-    <a class="card-sm card" *ngFor="let tea of teaTypes" (click)="addToCart(tea)">
+    <a matRipple class="card-sm card noselect" *ngFor="let tea of teaTypes" (click)="addToCart(tea)">
       <i class="material-icons">{{ tea.icon}}</i>
       <span> {{ tea.itemName }}</span>
     </a>
   </mat-dialog-content>
+  <mat-dialog-actions align="center">
+    <button matRipple mat-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>
 </ng-template>
 
 <router-outlet></router-outlet>

@@ -13,7 +13,7 @@ export class MoneyBarComponent {
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
     private _bottomSheetRef: MatBottomSheetRef<MoneyBarComponent>,
-    private _snackBar: MatSnackBar
+    private snackBar: MatSnackBar
   ) { }
 
   buttons = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -44,7 +44,6 @@ export class MoneyBarComponent {
 
     } else {
       this.showError()
-      //do error thing for feedback - perhaps a toaster
     }
   }
 
@@ -64,18 +63,7 @@ export class MoneyBarComponent {
   }
 
   showError() {
-    this._snackBar.openFromComponent(ErrorBarComponent, {
-      duration: 3 * 1000,
-    });
+    this.snackBar.open('Error: Change cannot be negative', '', { duration: 2000 });
   }
 
 }
-
-// this is for the error handeling feedback
-
-@Component({
-  selector: 'error-bar',
-  templateUrl: 'error-template.html',
-  styles: [],
-})
-export class ErrorBarComponent { }

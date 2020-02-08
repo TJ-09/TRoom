@@ -35,7 +35,6 @@ export const HatchTea = [
 
 export const IndoorTea = [
     { itemName: 'Pot of Tea', cost: 0, icon: 'free_breakfast', amount: 1 },
-    // { itemName: 'Pot of Tea for 2', cost: 2.4, icon: 'free_breakfast', amount: 1 },
 ]
 
 export const HatchTeaType = [
