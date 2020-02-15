@@ -13,7 +13,7 @@
   h4,
   h5,
   h6 {
-    margin: 8px 0 0 15px;
+    margin: 8px 0 0 20px;
   }
 
 .noselect {
@@ -177,10 +177,11 @@
   footer {
     position:fixed;
     bottom:0px;
-    width:100%;
+    // width:100%;
     margin-top: 8px;
     display: flex;
     align-items: center;
+    margin-left: 50%;
     line-height: 20px;
   }
 
