@@ -1,16 +1,30 @@
-<p>Current Bill: {{currentBill | currency: 'GBP'}}</p>
+<p>
+  Current Bill:<strong>{{ currentBill | currency: "GBP" }}</strong>
+</p>
 <mat-divider></mat-divider>
-<p>Payment: {{displayMoney | currency: 'GBP'}}</p>
+<p>Payment: {{ displayMoney | currency: "GBP" }}</p>
 <mat-divider></mat-divider>
-<p>Change: {{change | currency: 'GBP'}}</p>
+<p>Change: {{ change | currency: "GBP" }}</p>
 <mat-divider></mat-divider>
 <mat-grid-list cols="3" rowHeight="2:1">
-
-    <mat-grid-tile *ngFor="let button of buttons"> <button mat-raised-button class="card"
-            (click)="pressNumber(button)">{{ button }}</button></mat-grid-tile>
-    <mat-grid-tile><button mat-raised-button color="warn" (click)="clearButton()">Clear</button></mat-grid-tile>
-    <mat-grid-tile><button mat-raised-button (click)="pressNumber('0')">0</button></mat-grid-tile>
-    <mat-grid-tile><button mat-raised-button color="primary" (click)="submitNumber()">Submit</button>
-    </mat-grid-tile>
-
+  <mat-grid-tile *ngFor="let button of buttons">
+    <button mat-raised-button class="card" (click)="pressNumber(button)">
+      {{ button }}
+    </button></mat-grid-tile
+  >
+  <mat-grid-tile
+    ><button mat-raised-button color="warn" (click)="clearButton()">
+      Clear
+    </button></mat-grid-tile
+  >
+  <mat-grid-tile
+    ><button mat-raised-button (click)="pressNumber('0')">
+      0
+    </button></mat-grid-tile
+  >
+  <mat-grid-tile>
+    <button mat-raised-button color="primary" (click)="submitNumber()">
+      Submit
+    </button>
+  </mat-grid-tile>
 </mat-grid-list>
