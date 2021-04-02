@@ -4,12 +4,12 @@
 // https://material.io/resources/icons/?icon=adb&style=outline
 
 export const HatchProducts = [
-  { itemName: "Cake", cost: 1.8, icon: "cake", amount: 1 },
-  { itemName: "Cake Special", cost: 2.5, icon: "cake", amount: 1 },
-  { itemName: "Cream Tea", cost: 2.5, icon: "scatter_plot", amount: 1 },
-  { itemName: "Scone", cost: 1.3, icon: "fiber_manual_record", amount: 1 },
-  { itemName: "Filter Coffee", cost: 1.2, icon: "local_cafe", amount: 1 },
-  { itemName: "Decaf Coffee", cost: 0.7, icon: "local_cafe", amount: 1 },
+  { itemName: "Cake", cost: 2.0, icon: "cake", amount: 1 },
+  { itemName: "Cake Special", cost: 3.0, icon: "cake", amount: 1 },
+  { itemName: "Cream Tea", cost: 3.0, icon: "scatter_plot", amount: 1 },
+  { itemName: "Scone", cost: 1.5, icon: "fiber_manual_record", amount: 1 },
+  { itemName: "Filter Coffee", cost: 2.0, icon: "local_cafe", amount: 1 },
+  { itemName: "Decaf Coffee", cost: 1.0, icon: "local_cafe", amount: 1 },
   { itemName: "Juice", cost: 0.3, icon: "local_drink", amount: 1 },
   { itemName: "Cookbook", cost: 7.5, icon: "menu_book", amount: 1 },
 ];

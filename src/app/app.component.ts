@@ -27,13 +27,13 @@ export class AppComponent {
   items = [];
   itemsCost = [];
 
-  //star off inside so set the products accordingly
-  products = IndoorProducts;
+  //start off hatch so set the products accordingly
   indoorteas = IndoorTea;
-  teas = IndoorTea;
-  teaTypes = IndoorTeaType;
-  menu = "Inside Menu";
-  toggle = true;
+  products = HatchProducts;
+  teas = HatchTea;
+  teaTypes = HatchTeaType;
+  menu = "Hatch Menu";
+  toggle = false;
 
   // set the bill to zero
   currentBill = 0;
