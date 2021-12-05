@@ -20,7 +20,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To build for the demo page the command below, which can then be pushed.
 
-`ng build --prod --output-path docs --base-href /TRoom/`
+`ng build --configuration production --output-path docs --base-href /TRoom/`
 
 ## Live demo
 
